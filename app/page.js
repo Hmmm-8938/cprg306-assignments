@@ -10,6 +10,7 @@ export default function Home() {
       
       <ul>
         <li className="text-2xl text-cyan-600 hover:text-cyan-950"><Link href="./week-2">Week #2 Assignment</Link></li>
+        <li className="text-2xl text-cyan-600 hover:text-cyan-950"><Link href="./week-3">Week #3 Assignment</Link></li>
       </ul>
     </main>
   );
