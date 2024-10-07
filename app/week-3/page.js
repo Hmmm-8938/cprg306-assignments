@@ -10,7 +10,6 @@ export default function ShoppingList()
             <h1 className="text-6xl">Shopping List</h1>
             <Spacer size="20px"/>
             <ItemList/>
-            
         </main>
     )
 }
