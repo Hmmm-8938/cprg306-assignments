@@ -50,13 +50,15 @@ const NewItem = () => {
        setCategory("");
     }
 
+    const [defaultcategory, setDefaultCategory] = useState('categoryDisabled')
+
 
 
     return (
         <form onSubmit={handleSubmit} className='bg-gray-600 p-5 rounded-3xl border mt-5'>
             <div className='mb-5'>
                 <label className='inline-block w-52 h-5 text-black font-black'>Item Name: </label>
-                <input className='bg-slate-500 ml-5 px-2 py-0.5 rounded border border-blue-500' type='text' required='true' onChange={handleItemNameChange} value={itemName}></input>
+                <input className='bg-slate-500 ml-5 px-2 py-0.5 rounded border border-blue-500' type='text' required={true} onChange={handleItemNameChange} value={itemName}></input>
             </div>
             <div className='mb-5'>
                 <Counter className="p-5" currentCount={quantity} incrementCounterFunction={incrementCounter} decrementCounterFunction={decrementCounter}/>
@@ -64,7 +66,7 @@ const NewItem = () => {
             <div className='mb-5'>
                 <label className='inline-block w-52 h-5 text-black font-black'>Category: </label>
                 <select className='bg-slate-500 ml-5 px-2 py-0.5 rounded border border-blue-500' onChange={handleCategoryChange} value={category}>
-                    <option value ='' disabled selected>-- Please select a category --</option> 
+                    <option value='categoryDisabled' disabled >-- Please select a category --</option> 
                     <option value='produce'>Produce</option>
                     <option value='dairy'>Dairy</option>
                     <option value='bakery'>Bakery</option>
@@ -79,7 +81,7 @@ const NewItem = () => {
                 </select>
             </div>
             <div className='mb-5'>
-                <button className='inline-block w-full h-10 px-2 py-1 rounded border border-blue-500 bg-green-500 text-black font-black hover:bg-green-900'>Submit Registration</button>
+                <button className='inline-block w-full h-10 px-2 py-1 rounded border border-blue-500 bg-green-500 text-black font-black hover:bg-green-900' type="submit">Submit Registration</button>
             </div>
         </form>
     );

@@ -23,13 +23,17 @@ export default function Counter({currentCount, incrementCounterFunction, decreme
             <button 
                 className={btnStyles}
                 onClick={decrementCounterFunction}
-                disabled={btn2Disable}>
+                disabled={btn2Disable}
+                type="button"
+                >
                 -
             </button>
             <button
                 className={btnStyles}
                 onClick={incrementCounterFunction}
-                disabled={btnDisable}>
+                disabled={btnDisable}
+                type="button"
+                >
                 +   
             </button>
         </div>

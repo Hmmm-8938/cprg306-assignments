@@ -1,6 +1,3 @@
-import Spacer from "./spacer";
-
-
 export default function Counter({currentCount, incrementCounterFunction, decrementCounterFunction})
 {
 
