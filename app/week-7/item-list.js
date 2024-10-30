@@ -7,7 +7,7 @@ export default function ItemList ({listOfItems})
     const [sortBy, setSortBy] = useState("id")
 
     listOfItems.sort( (a, b) => {
-        if (isNaN(parseInt(a[sortBy])))
+        if (isNaN(parseInt(a[sortBy])) && a[sortBy] && b[sortBy])
         {
             //sorting alphabetically
             let nameA = a[sortBy].toUpperCase();

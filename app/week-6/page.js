@@ -1,15 +1,22 @@
+"use client"
 import MenuBar from "../_components/menu-bar";
 import ItemList from "./item-list";
-import Spacer from "./spacer";
+import items from "./items.json"
+import { useState } from "react";
+
 
 export default function ShoppingList()
 {
+    let itemsArray = items.map((item) => ({...item}));
+    const [itemsList, setItemsList] = useState(itemsArray)
+
+    const addNewItem = (newItemObject) => {
+        setItemsList([...itemsList, newItemObject]);
+    }
     return(
         <main>
             <MenuBar/>
-            <h1 className="text-6xl">Shopping List</h1>
-            <Spacer size="20px"/>
-            <ItemList/>
+            <ItemList listOfItems={itemsList}/>
         </main>
     )
 }
